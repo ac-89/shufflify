@@ -2,10 +2,18 @@ const bWard = document.querySelector("fa-stpe-backward");
 const fWard = document.querySelector("fa-step-forward");
 
 fetch(
-  "https://en.wikipedia.org/w/api.php?action=query&format=json&list=random&formatversion=2&rnlimit=5&rnnamespace=0"
+  "https://en.wikipedia.org/w/api.php?action=query&format=json&list=random&formatversion=2&rnlimit=5&rnnamespace=0",
+  {
+    mode: "no-cors",
+    method: "GET",
+    headers: {
+      accessControlAllowOrigin: "http://en.wikipedia.org/w/api.php",
+    },
+  }
 )
   .then((res) => res.json())
   .then((data) => {
+    console.log(data);
     let artist = document.querySelector(".artist");
     let article = data.query.random[0].title;
     let brIndex = () => {
