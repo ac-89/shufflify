@@ -2,14 +2,13 @@ const bWard = document.querySelector("fa-stpe-backward");
 const fWard = document.querySelector("fa-step-forward");
 
 fetch(
-  "https://en.wikipedia.org/w/api.php?action=query&format=json&list=random&formatversion=2&rnlimit=5&rnnamespace=0",
-  {
-    mode: "no-cors",
-    method: "GET",
-    headers: {
-      accessControlAllowOrigin: "http://en.wikipedia.org/w/api.php",
-    },
-  }
+  "https://en.wikipedia.org/w/api.php?action=query&format=json&list=random&formatversion=2&rnlimit=5&rnnamespace=0&origin=*"
+  // {
+  //   headers: {
+  //     "Access-Control-Allow-Origin": "*",
+  //     "Access-Control-Allow-Headers": "*",
+  //   },
+  // }
 )
   .then((res) => res.json())
   .then((data) => {
