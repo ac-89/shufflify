@@ -1,4 +1,77 @@
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
 .main {
-  max-width: 600px;
+  max-width: 400px;
+  max-height: 100vh;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1),
+    rgba(29, 185, 84, 1) 150%
+  );
+}
+
+.head-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.playing {
+  font-size: 0.8rem;
+  padding-bottom: 0.4rem;
+}
+
+img {
+  margin: 4rem auto;
+  max-width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem 0.6rem;
+}
+
+.song-title {
+}
+
+.artist {
+  font-weight: 100;
+  font-size: 1rem;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.4rem;
+}
+
+i.play-btn {
+  font-size: 4rem;
+  color: rgba(29, 185, 84, 1);
+}
+
+.time {
+  display: flex;
+  padding: 1.3rem 0;
+}
+.time input {
+  flex: 2;
+}
+
+@media screen and (max-width: 450px) {
+  img {
+    margin: 2rem auto;
+  }
 }
