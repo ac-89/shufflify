@@ -13,6 +13,11 @@ fetch(
   .then((res) => res.json())
   .then((data) => {
     console.log(data);
+    Array.from(data).filter(
+      (f) =>
+        typeof f.query.random.title[0] != "number" ||
+        f.query.random.title.startsWith("List")
+    );
     let artist = document.querySelector(".artist");
     let article = data.query.random[0].title;
     let brIndex = () => {
