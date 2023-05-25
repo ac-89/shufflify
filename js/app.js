@@ -1,14 +1,24 @@
-const bWard = document.querySelector("fa-stpe-backward");
-const fWard = document.querySelector("fa-step-forward");
+const bWard = document.querySelectorAll(".fa");
+bWard.forEach((btn) =>
+  btn.addEventListener("click", function (e) {
+    // location.reload();
+    window.location.reload();
+  })
+);
+let img = document.querySelector("img");
+let imgLoad = document.querySelector(".animated_bg");
+let titleLoad = document.querySelector(".animated_bg_title");
+// let imgLoad = document.querySelector(".animated_bg");
+let artist = document.querySelector(".artist");
+let title = document.querySelector(".song-title");
+
+window.onload = function () {
+  imgLoad.style.display = "none";
+  titleLoad.style.display = "none";
+};
 
 fetch(
   "https://en.wikipedia.org/w/api.php?action=query&format=json&list=random&formatversion=2&rnlimit=5&rnnamespace=0&origin=*"
-  // {
-  //   headers: {
-  //     "Access-Control-Allow-Origin": "*",
-  //     "Access-Control-Allow-Headers": "*",
-  //   },
-  // }
 )
   .then((res) => res.json())
   .then((data) => {
@@ -18,7 +28,7 @@ fetch(
         typeof f.query.random.title[0] != "number" ||
         f.query.random.title.startsWith("List")
     );
-    let artist = document.querySelector(".artist");
+
     let article = data.query.random[0].title;
     let brIndex = () => {
       if (article.split("").includes("(")) {
@@ -35,6 +45,5 @@ fetch("https://api.quotable.io/quotes/random?maxLength=35")
   .then((data) => {
     let quote = data[0].content;
     console.log(quote);
-    let title = document.querySelector(".song-title");
     title.innerText = quote;
   });
