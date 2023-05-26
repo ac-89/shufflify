@@ -3,12 +3,6 @@ const fWard = document.querySelector("fa-step-forward");
 
 fetch(
   "https://en.wikipedia.org/w/api.php?action=query&format=json&list=random&formatversion=2&rnlimit=5&rnnamespace=0&origin=*"
-  // {
-  //   headers: {
-  //     "Access-Control-Allow-Origin": "*",
-  //     "Access-Control-Allow-Headers": "*",
-  //   },
-  // }
 )
   .then((res) => res.json())
   .then((data) => {
