@@ -58,36 +58,6 @@ body {
   position: relative;
   display: block;
 }
-/* .animated_bg_title {
-  margin: 0.5rem 0;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: infinite;
-  animation-name: placeHolderShimmer;
-  animation-timing-function: linear;
-  background-color: #f6f7f8;
-  background: linear-gradient(to right, #eeeeee 8%, #bbbbbb 18%, #eeeeee 33%);
-  background-size: 400px 400px;
-  height: 40px;
-  width: 400px;
-  position: relative;
-  border: solid 1px red;
-}
-.animated_bg_title_artist {
-  margin: 0.5rem 0;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: infinite;
-  animation-name: placeHolderShimmer;
-  animation-timing-function: linear;
-  background-color: #f6f7f8;
-  background: linear-gradient(to right, #eeeeee 8%, #bbbbbb 18%, #eeeeee 33%);
-  background-size: 400px 400px;
-  height: 40px;
-  width: 400px;
-  position: relative;
-  border: solid 1px red;
-} */
 
 img {
   max-width: 100%;
@@ -133,7 +103,7 @@ i.play-btn {
 }
 
 input[type="range"] {
-  -webkit-appearance: none;
+  /* -webkit-appearance: none; */
   height: 4px;
   width: 20px;
   padding: 0 5px;
