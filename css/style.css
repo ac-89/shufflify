@@ -20,6 +20,11 @@ body {
   );
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
 .head-text {
   display: flex;
   flex-direction: column;
@@ -27,8 +32,12 @@ body {
 }
 
 .playing {
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   padding-bottom: 0.4rem;
+}
+
+.playlist {
+  font-size: 0.7rem;
 }
 @keyframes placeHolderShimmer {
   0% {
@@ -61,30 +70,34 @@ body {
 
 img {
   max-width: 100%;
-  margin: 4rem auto;
+  margin: 3rem auto;
   max-height: 400px;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 0.4rem 0.6rem;
+  padding: 0.2rem 0.6rem;
 }
 
 .song-title {
-  margin: 0.5rem 0;
+  margin: 0.8rem 0;
+  font-size: 1.4rem;
+  font-weight: 700;
 }
 
 .artist {
   font-weight: 100;
   font-size: 1rem;
+  padding: 0.5rem 0 1rem 0;
 }
 
 .controls {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
+  padding: 1rem 0.5rem;
 }
 
 i.play-btn {
@@ -117,6 +130,29 @@ input[type="range"] {
 
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
+<<<<<<< HEAD
+=======
+  border: none;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background: white;
+  /* margin-top: -4px; */
+}
+
+input[type="range"]::-ms-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background: white;
+  /* margin-top: -4px; */
+}
+
+input[type="range"]::-moz-range-thumb {
+  -webkit-appearance: none;
+>>>>>>> develop
   border: none;
   height: 8px;
   width: 8px;
