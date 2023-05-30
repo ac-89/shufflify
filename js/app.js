@@ -24,7 +24,6 @@ fetch(
         typeof f.query.random.title[0] != "number" ||
         f.query.random.title.startsWith("List")
     );
-
     let article = data.query.random[0].title;
     let brIndex = () => {
       if (article.split("").includes("(")) {
@@ -41,3 +40,22 @@ fetch("https://api.quotable.io/quotes/random?maxLength=35")
     let quote = data[0].content;
     title.innerText = quote;
   });
+
+let playBar = document.querySelector(".playBar");
+
+playBar.addEventListener("change", function (e) {
+  let timeSpan = document.querySelector(".timeChange");
+  let val = e.target.value;
+  console.log(convertToMinutesAndSeconds(val));
+  timeSpan.innerText = convertToMinutesAndSeconds(val);
+});
+
+function convertToMinutesAndSeconds(seconds) {
+  const minutes = Math.floor(seconds / 60);
+  const remainingSeconds = seconds % 60;
+
+  const formattedMinutes = String(minutes);
+  const formattedSeconds = String(remainingSeconds).padStart(2, "0");
+
+  return `${formattedMinutes}:${formattedSeconds}`;
+}
