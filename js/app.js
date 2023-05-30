@@ -1,4 +1,15 @@
-const bWard = document.querySelectorAll(".fa");
+const bWard = document.querySelectorAll(".button");
+const modal = document.querySelector(".about_modal");
+const aboutBtn = document
+  .querySelector(".about")
+  .addEventListener("click", function () {
+    modal.style.display = "block";
+  });
+const exitModal = document
+  .querySelector(".exit")
+  .addEventListener("click", function () {
+    modal.style.display = "none";
+  });
 bWard.forEach((btn) =>
   btn.addEventListener("click", function (e) {
     // location.reload();
